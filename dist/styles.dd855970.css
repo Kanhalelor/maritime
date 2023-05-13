@@ -15,7 +15,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  font-family: Arial;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   overflow-x: hidden;
 }
 
@@ -47,16 +47,14 @@ body {
   float: right;
   color: #121212;
   text-align: center;
-  padding: 1rem 0.5rem;
+  padding: .2rem 0.5rem;
+  margin: 0 .5rem;
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
+  transition: .3s ease-in-out;
 }
 
-/* .active {
-  background-color: #04aa6d;
-  color: white;
-} */
 
 .nav-wrapper .icon {
   display: none;
@@ -67,6 +65,9 @@ body {
 }
 
 .dropdown .dropbtn {
+  padding: .2rem 0.5rem;
+  margin: 0 .5rem;
+  transition: .3s ease-in-out;
   font-size: 15px;
   border: none;
   outline: none;
@@ -80,7 +81,7 @@ body {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -109,6 +110,7 @@ body {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  border: 1px solid #ccc;
 }
 
 .header {
@@ -135,20 +137,71 @@ body {
 /* slideshow container */
 .content {
   background-color: tomato;
+  /* display: flex;
+  flex-flow: column;
+  justify-content: space-between; */
+  height: 100vh;
+}
+.slider {
+  width: 100%;
+  height: 100%;
   background-image: url("/seatime 3.1ce32345.jpg");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+}
+.welcome {
+  width: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  padding: 3rem 2rem;
+  margin: 2rem 2rem;
+}
+.welcome > p {
+  width: 300px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: large;
+  margin: 0 2rem;
+  transition: .4s ease-in-out;
+  border: 1px solid #727272;
+  text-align: justify;
+}
+.welcome > p:hover {
+  box-shadow: 3px 3px 5px 1px #121212;
+  background-color: #e0e0e0;
+}
+footer {
+  width: 100%;
+  margin-top: auto;
+  background: #249;
+  padding: 3rem 2rem;
   display: flex;
   flex-flow: column;
+  align-items: center;
+  
 }
-
-footer {
-  height: calc(80vh - 120vh);
-  background: #249;
-  margin-top: auto;
-  padding: 3rem 2rem;
+.contact-header {
+  padding: 5px 0;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #fff;
+}
+#contact, .contact-details {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: white;
+}
+.contact-details p {
+  font-size: 20px;
+  color: white;
+  margin: .5rem 0;
 }
 
 /* media queries */
