@@ -155,7 +155,7 @@ body {
   flex: 1 1 auto;
   flex-wrap: wrap;
   padding: 3rem 2rem;
-  margin: 2rem 2rem;
+  margin: 2rem 0rem;
 }
 .welcome > p {
   width: 300px;
@@ -167,7 +167,7 @@ body {
   justify-content: center;
   flex: 1;
   font-size: large;
-  margin: 0 2rem;
+  margin: 1rem 2rem;
   transition: 0.4s ease-in-out;
   border: 1px solid #727272;
   text-align: justify;
@@ -210,13 +210,23 @@ footer {
   .dropdown .dropbtn {
     display: none;
   }
+  .nav-wrapper.responsive a,
+  .dropdown .dropbtn {
+    display: block;
+  }
   .nav-wrapper a.icon {
     float: right;
     display: grid;
     place-items: center;
+    position: fixed;
+    right: 0;
+    top: 50px;
+  }
+  .top-nav {
+    padding: 0rem;
   }
   .nav-wrapper.responsive {
-    background: #121212;
+    background: #021318;
     padding: 1rem;
     position: absolute;
     top: 0;
